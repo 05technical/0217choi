@@ -1,1 +1,9 @@
-hello
+import sys
+
+def maxP_b(prices):
+    max_p=-sys.maximum
+    for i,price in enumerate(prices):
+        for j in range(i,len(prices)):
+            max_p=max(prices[j]-price,max_p)
+
+    return max_p
